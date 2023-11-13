@@ -1,0 +1,10 @@
+import sympy
+
+def factorize_rsa_number(n):
+    p, q = sympy.ntheory.factorint(n).keys()
+    return p, q
+
+n = 1234567890
+p, q = factorize_rsa_number(n)
+
+print(f"The prime factors of {n} are {p} and {q}.")
